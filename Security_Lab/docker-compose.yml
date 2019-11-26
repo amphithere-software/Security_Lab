@@ -1,0 +1,36 @@
+version: '3'
+services:
+        php-apache:
+                build: .
+                ports:
+                        - "8001:80"
+                volumes:
+                        - ./www:/var/www/html:z
+                links:
+                        - db
+        db:
+                image: mariadb:10.1
+                ports: 
+                        - "3306:3306"  
+                environment:
+                        MYSQL_USER: 'user'
+                        MYSQL_PASSWORD: 'password'
+                        MYSQL_ROOT_PASSWORD: 'rootpassword'
+                        MYSQL_DATABASE: 'xss'
+                        MYSQL_DATABASE: 'ACM'
+                        
+                volumes:
+                        - ./dump:/docker-entrypoint-initdb.d
+                        - persistent:/var/lib/mysql
+        phpmyadmin:
+                image: phpmyadmin/phpmyadmin
+                links:
+                        - db:db
+                ports:
+                        - "8000:80"
+                environment:
+                        MYSQL_USER: 'user'
+                        MYSQL_PASSWORD: 'password'
+                        MYSQL_ROOT_PASSWORD: 'rootpassword'
+volumes:
+        persistent:

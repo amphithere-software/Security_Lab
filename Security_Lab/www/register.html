@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+
+	<script>
+
+
+		function validate() {
+
+
+			var letters = /^[A-Za-z]+$/;
+			var usernameLetters = /^[A-Za-z0-9]+$/;
+			var passwordLetters = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+			var firstname = document.getElementById("firstname").value;
+			var lastname = document.getElementById("lastname").value;
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+
+			if (!firstname.match(letters)) {
+				alert("Not a valid First Name");
+				return false;
+			}
+			if (!lastname.match(letters)) {
+				alert("Not a valid Last Name");
+				return false;
+			}
+			if (!username.match(usernameLetters)) {
+				alert("Not a valid Username");
+				return false;
+			}
+			if (!password.match(passwordLetters)) {
+				alert("Not a valid Password\nRequires 8 characters,\none uppercase letter,\none lowercase letter,\nand one or more numbers.");
+				return false;
+			}
+
+		}
+
+
+	</script>
+
+</head>
+
+<body>
+
+    <div>
+        <nav class="topnav">
+            <a href="index.php">SQL Injection</a>
+            <a href="register.html">Registration</a>
+            <a href="non_persistentXSS.php">Non-Persistent XSS</a>
+            <a href="persistentXSS.php">Persistent XSS</a>
+            <a href="CSRF.php">Cross-Site Request Forgery</a>
+            <br />
+        </nav>
+    </div>
+    <br />
+			<div>
+		<form action="register.php" onsubmit="return validate()" method="get">
+
+
+
+				<fieldset>
+					<legend>
+					<h1>Registration</h1>
+					</legend>
+					<br />
+					<input type="text" placeholder="First Name" name="firstname" id="firstname" required>
+					<br /><br />
+					<input type="text" placeholder="Last Name" name="lastname" id="lastname" required>
+					<br /><br />
+					<input type="text" placeholder="Username" name="username" id="username" required>
+					<br /><br />
+					<input type="password" placeholder="Password" name="password" id="password" required>
+					<br /><br />
+					<br style="line-height: 2;" />
+					<input type="submit" value="Submit">
+
+					<input type="reset" value="Reset">
+
+					<br style="line-height: 2;" />
+
+				</fieldset>
+
+		</form>
+
+
+	</div>
+
+	<div class="footer">
+		<hr />
+		<footer>GNU General Public License v2.0</footer>
+		<hr />
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+	src: url(terminus/TerminusTTF-Bold-4.47.0.ttf);
+	font-family: term;
+}
+
+button {
+
+	background-color: aqua;
+	text-align: center;
+
+}
+
+p {
+	font-family: term;
+	font-size: 22pt;
+	margin-left: 10px;
+}
+
+body {
+	font-family: term;
+	font-size: 14pt;
+	background-color: #5d6d7e;
+	background-size: 100%;
+	position: relative;
+	height: 100%;
+}
+
+
+h1, h2, h3 {
+	color: #00ffff;
+	margin-left: 10px;
+}
+
+a {
+	color: #00ffff;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+a:hover {
+	background: #ffffff;
+	color: black;
+}
+
+.topnav a {
+	color: #00ffff;
+	display: inline-block;
+}
+
+/* Change color on hover */
+
+.topnav a:hover {
+	background-color: #0000ff;
+	color: black;
+}
+
+img {
+	float: left;
+	height: auto;
+	width: 100%;
+	padding: 2px;
+}
+
+
+table, td, th {
+	text-align: center;
+	border: 3px outset;
+	border-color: aqua;
+	border-width: 3px;
+	margin: 0 auto;
+}
+
+.table td {
+
+	border-collapse: collapse;
+
+}
+
+span {
+	color: red
+}
+
+hr {
+	color: blue
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	background-color: rgb(60, 0, 255);
+	border-width: 4px;
+	border-color: #000000;
+	color: rgb(255, 255, 255);
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+
+.footer {
+	text-align: center;
+	color: #00ffff;
+	padding: 15px;
+	width: 98%;
+	position: fixed;
+	bottom: 0px;
+}
+
+.header h1 {
+	color: #ffffff;
+	text-align: center;
+	margin-right: 10%;
+}
+
+fieldset{
+	border-color: #0000ff;
+
+}
+legend{
+	color: #00ffff;
+	margin: 0 auto;
+	text-align: center;
+
+}
+label{
+	font-weight: bold;
+	font-size: 18pt;
+}
+div {
+	text-align: center;
+}

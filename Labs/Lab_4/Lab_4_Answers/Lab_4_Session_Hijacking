@@ -1,0 +1,4 @@
+Question #1 (possible answers)
+ 
+<a href="Stealsession.php">Link</a>
+<a onMouseOver="document.location.href='Stealsession.php'" >Link</a>

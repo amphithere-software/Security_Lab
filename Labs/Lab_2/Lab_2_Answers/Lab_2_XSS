@@ -1,0 +1,17 @@
+Part 1. (possible answers)
+
+1.
+<font color="red">
+<i>
+<button>OK</button>
+
+2.
+<script>alert("XSS!")</script>
+
+Part 2.
+
+1.
+<a href="https://www.uncp.edu/">Link</a>
+
+2.
+<script>window.location="https://www.uncp.edu/"</script>
